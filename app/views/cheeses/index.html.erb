@@ -1,0 +1,9 @@
+<%= link_to "New Cheese", new_cheese_path %>
+
+<h3>All regions:</h3>
+
+<div>
+  <% @cheeses.each do |cheese| %>
+  <li> <%= link_to cheese.name, cheese %> </li>
+  <% end %>
+</div>

@@ -1,0 +1,12 @@
+<%= link_to "All regions", regions_path %>
+
+<h3> <%= @region.name %> </h3>
+Wines that come from this region:
+<br></br>
+<div>
+  <% @region.wines.each do |wine| %>
+    <li><%= link_to wine.name, wine %></li>
+  <% end %>
+</div>
+<br></br>
+<%= link_to "EDIT", edit_region_path %>

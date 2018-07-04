@@ -1,0 +1,15 @@
+<%= link_to "All wines", wines_path %>
+
+<h3> <%= @wine.name %> </h3>
+<div>
+    is made in: <%= link_to @wine.region.name, @wine.region %><br></br>
+    
+    <% if @wine.cheeses.size > 0 %>
+      ...it pairs well with: <br></br>
+      <% @wine.cheeses.each do |cheese| %>
+      <li><%= link_to cheese.name, cheese %></li>
+      <% end %>
+    <% end %>
+</div>
+<br></br>
+<%= link_to "EDIT", edit_wine_path %>

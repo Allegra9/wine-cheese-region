@@ -1,0 +1,11 @@
+<%= link_to "Cancel", regions_path %>
+
+<h3>New region:</h3>
+
+<% if flash[:errors] %>
+  <% flash[:errors].each do |error| %>
+    <li> <%= error %> </li>
+  <% end %>
+<% end %>
+
+<%= render "form" %>

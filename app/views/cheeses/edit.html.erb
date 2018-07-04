@@ -1,0 +1,15 @@
+<%= link_to "Cancel", cheese_path %>
+
+<h3>Edit this cheese:</h3>
+
+<% if flash[:errors] %>
+  <% flash[:errors].each do |error| %>
+    <li> <%= error %> </li>
+  <% end %>
+<% end %>
+
+<%= render "form" %>
+
+<%= form_tag cheese_path(@cheese), method: "delete" do %>
+<%= submit_tag "Delete" %>
+<% end %>
