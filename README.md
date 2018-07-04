@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To get it up and running, run:
 
-Things you may want to cover:
+    rake db:migrate db:seed 
 
-* Ruby version
+This will run the migrations and seed your database with the data that is in the seeds.rb file. 
 
-* System dependencies
+Then run
 
-* Configuration
+    rails s
+    
+to get the server running and go to 
 
-* Database creation
+    localhost:3000/wines
 
-* Database initialization
+in your brower (let me guess you're using Crome).
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Have fun! 
